@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pokédex - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
   </head>
   <body>
     <main class="grid grid-rows-[5%_80%_15%] h-screen">
       <!-- barra vermelho escuro no topo da página -->
       <section class="w-full h-full bg-[#0a0000]"></section>
-      <section
-        class="w-full h-full flex flex-col items-center justify-center gap-10 bg-[radial-gradient(circle_at_center,_#2b0000_5%,_#150000_40%,_#0a0000_100%)]"
+      <main
+        class="w-full h-full flex flex-col items-center justify-center gap-10 bg-[radial-gradient(circle_at_center,_#2b0000_5%,_#150000_40%,_#0a0000_100%)] px-5"
       >
         <img
           class="h-40 w-40 drop-shadow-[0_10px_10px_rgba(255,204,0,0.3)] md:h-56 md:w-56"
@@ -27,18 +28,18 @@
         </div>
         <a href="./explorar.html">
           <button
-            class="hover:bg-[#ee4c00] bg-[#da4500] py-3 px-12 rounded-lg text-white font-bold text-lg border-2 border-yellow-500 hover:drop-shadow-[0_5px_5px_rgba(255,204,0,0.3)] drop-shadow-[0_2px_2px_rgba(255,204,0,0.3)] cursor-pointer hover:scale-105 transition duration-300"
+            class="hover:bg-[#ee4c00] bg-[#da4500] py-3 px-12 rounded-lg text-white font-bold text-lg border-2 border-yellow-500 hover:drop-shadow-[0_5px_5px_rgba(255,204,0,0.3)] drop-shadow-[0_2px_2px_rgba(255,204,0,0.3)] cursor-pointer hover:scale-105 transform transition-all duration-300 animate-pulse hover:animate-none"
           >
             Explorar Pokémon
           </button>
         </a>
-      </section>
+      </main>
 
       <!-- barra vermelho escuro em baixo da página com parágrafo -->
       <section
         class="w-full h-full bg-[#0a0000] flex justify-center items-center"
       >
-        <p class="text-gray-300 text-sm">
+        <p class="text-gray-300 text-sm text-center">
           Desenvolvido por Douglas Phelipe — Projeto Acadêmico
         </p>
       </section>
