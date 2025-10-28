@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Poppins:wght@400;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+.font-poppins-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.font-poppins-paragraph {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}

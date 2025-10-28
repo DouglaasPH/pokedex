@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Pokédex - Home</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main class="grid grid-rows-[5%_80%_15%] h-screen">
+      <!-- barra vermelho escuro no topo da página -->
+      <section class="w-full h-full bg-[#0a0000]"></section>
+      <section
+        class="w-full h-full flex flex-col items-center justify-center gap-10 bg-[radial-gradient(circle_at_center,_#2b0000_5%,_#150000_40%,_#0a0000_100%)]"
+      >
+        <img
+          class="h-40 w-40 drop-shadow-[0_10px_10px_rgba(255,204,0,0.3)] md:h-56 md:w-56"
+          data-alt="Illustration of Pikachu, a yellow electric-type Pokémon"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67PtzevifxfuLH1_FycfLesD2XVTDdOwalsCCE9kE42epmNSQX461ZfCkL7-XALVMvWrSjJriPoajBeJ4A9vX-09-ltu6gLwsTC0pRh8IKdvbhhCe5ZzHuJmKM_fxrINvW96-lywDFOhT-MTMCnpl-H8oDNHPslG3zIjx01ieixJushJCpjwxjggHjvQtaSM_wKPI2wwcO-hxNrswQHESOTtG7t4e2dMFnS7LBdkwoqP4RWpjHrq4aY5hDqpweqTSzCkAY2JzcnQU"
+        />
+        <div class="flex flex-col text-center gap-4">
+          <h1 class="text-white text-5xl font-poppins-title">Pokédex Web</h1>
+          <p class="text-gray-300/70 text-lg font-poppins-paragraph">
+            Descubra informações sobre todos os Pokémons!
+          </p>
+        </div>
+        <a href="./explorar.html">
+          <button
+            class="hover:bg-[#ee4c00] bg-[#da4500] py-3 px-12 rounded-lg text-white font-bold text-lg border-2 border-yellow-500 hover:drop-shadow-[0_5px_5px_rgba(255,204,0,0.3)] drop-shadow-[0_2px_2px_rgba(255,204,0,0.3)] cursor-pointer hover:scale-105 transition duration-300"
+          >
+            Explorar Pokémon
+          </button>
+        </a>
+      </section>
+
+      <!-- barra vermelho escuro em baixo da página com parágrafo -->
+      <section
+        class="w-full h-full bg-[#0a0000] flex justify-center items-center"
+      >
+        <p class="text-gray-300 text-sm">
+          Desenvolvido por Douglas Phelipe — Projeto Acadêmico
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
