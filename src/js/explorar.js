@@ -292,34 +292,51 @@ botaoVerFavoritos.addEventListener("click", async () => {
 
 input.addEventListener("input", async (event) => {
   usuarioEstaBuscandoPokemon = true;
+  let tempo = 0;
   renderizarPaginacao();
-  sectionTodosCards.innerHTML = "";
-  try {
-    const res = await pegarPokemonComBaseEmIdOuNome(event.target.value);
-    const {
-      pokemon_id,
-      imagem_do_pokemon,
-      nome_do_pokemon_com_id,
-      tipo_principal,
-      background_color,
-      iconeFavorito,
-      dadosDoPokemonAtual,
-    } = criarDadosDoPokemon(res);
+  if (event.target.value !== "") {
+    sectionTodosCards.innerHTML = `
+  <p class="text-center text-yellow-400 font-semibold text-lg animate-pulse absolute left-10">
+    Buscando...
+  </p>
+`;
+    tempo = 500;
+  } else sectionTodosCards.innerHTML = "";
+  setTimeout(async () => {
+    sectionTodosCards.innerHTML = "";
+    try {
+      const res = await pegarPokemonComBaseEmIdOuNome(event.target.value);
+      const {
+        pokemon_id,
+        imagem_do_pokemon,
+        nome_do_pokemon_com_id,
+        tipo_principal,
+        background_color,
+        iconeFavorito,
+        dadosDoPokemonAtual,
+      } = criarDadosDoPokemon(res);
 
-    criarCard(
-      pokemon_id,
-      imagem_do_pokemon,
-      nome_do_pokemon_com_id,
-      tipo_principal,
-      background_color,
-      iconeFavorito,
-      dadosDoPokemonAtual
-    );
-  } catch (error) {
-    if (event.target.value === "") {
-      usuarioEstaBuscandoPokemon = false;
-      carregarPokemons();
-      renderizarPaginacao();
+      criarCard(
+        pokemon_id,
+        imagem_do_pokemon,
+        nome_do_pokemon_com_id,
+        tipo_principal,
+        background_color,
+        iconeFavorito,
+        dadosDoPokemonAtual
+      );
+    } catch (error) {
+      if (event.target.value === "") {
+        usuarioEstaBuscandoPokemon = false;
+        carregarPokemons();
+        renderizarPaginacao();
+      } else {
+        sectionTodosCards.innerHTML = `
+  <p class="text-center text-red-500 font-bold text-lg absolute left-10">
+    Não encontrado 😔
+  </p>
+`;
+      }
     }
-  }
+  }, tempo);
 });
