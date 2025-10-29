@@ -162,11 +162,9 @@ function criarCard(
         (favorito) => favorito !== botaoFavorito.value
       );
       botaoFavorito.children[0].src = "../images/estrela-branca.svg";
-      console.log("estrela branca", botaoFavorito);
     } else {
       favoritos.push(pokemon_id);
       botaoFavorito.children[0].src = "../images/estrela-amarela.svg";
-      console.log("estrela amarela", botaoFavorito);
     }
 
     localStorage.setItem("favoritos", JSON.stringify(favoritos));
@@ -188,9 +186,9 @@ function criarDadosDoPokemon(dadosDoPokemonAtual) {
   if (favoritos.length > 0) {
     if (favoritos.includes(String(dadosDoPokemonAtual.id))) {
       iconeFavorito = "../images/estrela-amarela.svg";
-    } else {
-      iconeFavorito = "../images/estrela-branca.svg";
     }
+  } else {
+    iconeFavorito = "../images/estrela-branca.svg";
   }
 
   return {
@@ -292,11 +290,9 @@ botaoVerFavoritos.addEventListener("click", async () => {
   }
 });
 
-console.log(input.value);
 input.addEventListener("input", async (event) => {
   usuarioEstaBuscandoPokemon = true;
   renderizarPaginacao();
-  console.log(event.target.value);
   sectionTodosCards.innerHTML = "";
   try {
     const res = await pegarPokemonComBaseEmIdOuNome(event.target.value);
@@ -320,7 +316,6 @@ input.addEventListener("input", async (event) => {
       dadosDoPokemonAtual
     );
   } catch (error) {
-    console.log(error);
     if (event.target.value === "") {
       usuarioEstaBuscandoPokemon = false;
       carregarPokemons();
