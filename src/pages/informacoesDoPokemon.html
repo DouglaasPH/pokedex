@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedéx - Informações do Pokémon</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+  </head>
+  <body
+    class="px-5 bg-[radial-gradient(circle_at_center,_#2b0000_5%,_#150000_40%,_#0a0000_100%)] flex flex-col gap-15 pb-5"
+  >
+    <header
+      class="w-full flex justify-between items-center px-2 py-6 border-b-1 border-[#2b0000]"
+    >
+      <a class="flex items-center gap-3 cursor-pointer" href="./inicio.html">
+        <img
+          src="../images/logo.png"
+          alt="logo pokémon"
+          class="h-7 w-7 drop-shadow-[0_4px_4px_rgba(255,204,0,0.3)]"
+        />
+        <h1
+          class="orbitron text-[20px] text-[#FFCC00] drop-shadow-[0_3px_3px_rgba(255,204,0,0.5)]"
+        >
+          Pokédex Web
+        </h1>
+      </a>
+      <section>
+        <a href="./explorar.html">
+          <button
+            class="bg-[#150000] border-1 border-[#FFCC00]/70 rounded-sm px-4 py-2 cursor-pointer hover:scale-105 transform transition-all duration-300 font-poppins-card drop-shadow-[0_3px_3px_rgba(255,204,0,0.5)]"
+          >
+            <p class="text-gray-300">Voltar</p>
+          </button>
+        </a>
+      </section>
+    </header>
+    <main class="flex flex-col justify-center items-center gap-5">
+      <div class="bg-green-600 h-80 w-80 rounded-xl">image</div>
+      <h4
+        class="orbitron text-3xl text-[#FFCC00] drop-shadow-[0_3px_3px_rgba(255,204,0,0.5)]"
+      >
+        #006
+      </h4>
+      <h1 class="orbitron text-5xl text-white">Charizard</h1>
+      <div class="flex gap-2">
+        <div
+          class="bg-green-300/20 px-3 py-0.5 rounded-full border-1 border-green-500"
+        >
+          <p class="font-poppins-card text-green-400 text-[10px]">Grass</p>
+        </div>
+        <div
+          class="bg-purple-300/20 px-3 py-0.5 rounded-full border-1 border-purple-500"
+        >
+          <p class="font-poppins-card text-purple-400 text-[10px]">Poison</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-10 md:flex-row justify-between">
+        <div
+          class="w-40 h-30 flex flex-col justify-center items-center gap-3 bg-[#2b0000] rounded-xl"
+        >
+          <h4 class="orbitron text-lg text-red-200">ALTURA</h4>
+          <p class="font-poppins-title text-white text-xl">1.7m</p>
+        </div>
+        <div
+          class="w-40 h-30 flex flex-col justify-center items-center gap-3 bg-[#2b0000] rounded-xl"
+        >
+          <h4 class="orbitron text-lg text-red-200">PESO</h4>
+          <p class="font-poppins-title text-white text-xl">90.5kg</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
